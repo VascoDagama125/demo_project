@@ -1,16 +1,18 @@
-# This is a sample Python script.
+figure = input("What figure do you want to calculate? :")
+figures = ["square", "triangle", "circle", "rectangle", "elipse", "trapezoid"]
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if figure in figures:
+    print(f"The figure you chosen is available")
+    if figure in figures and figure == figures[0]:
+        a_square = int(input("type in measurement of a side: "))
+        square_area = a_square * a_square
+        print(f"The area of the square is: {square_area}")
+    elif figure in figures and figure == figures[1]:
+        a_triangle = int(input("type in measurement of a side: "))
+        h = int(input("type in measurement of a height:"))
+        triangle_area = (a_triangle * h) / 2
+        print(f"The area of the square is: {triangle_area}")
+    else:
+        print("Sorry! There is no such option. ")
+else:
+    print("There is not this kind of figure in this program")
